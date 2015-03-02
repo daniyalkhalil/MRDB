@@ -83,11 +83,18 @@
                                 <span class="badge" id="dis"></span>
                             </button>
 
-                            <button type="button" id="btn-primary_@i" class="btn btn-warning" onclick="window.location.href='http://beemp3s.org/index.php?q=@s.name+@s.artist&st=all'">
-                                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
-                            </button>
-
                             @{s.name = s.name + ".mp3";}
+                            <a href="/Home/download?file=@s.name">
+                                <button type="button" id="btn-primary_@i" class="btn btn-warning">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
+                                </button>
+                            </a>
+
+                            @*<button type="button" id="btn-primary_@i" class="btn btn-warning" onclick="window.location.href='http://beemp3s.org/index.php?q=@s.name+@s.artist&st=all'">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
+                                </button>*@
+
+                            @*@{s.name = s.name + ".mp3";}*@
 
                             <button type="button" id="play_@i" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Play
@@ -105,7 +112,7 @@
             }
             <br />
             <center>
-                @Html.PagedListPager(Model, Page => Url.Action("members", new { Page, name = Request.QueryString["name"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded,DisplayItemSliceAndTotal=true})
+                @Html.PagedListPager(Model, Page => Url.Action("members", new { Page, name = Request.QueryString["name"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayItemSliceAndTotal = true })
             </center>
         </div>
 
