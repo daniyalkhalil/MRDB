@@ -38,6 +38,12 @@
                     <br /><br />
                     <label class="l" for="file">Upload Song:</label><br /><br /><br />
                     <input class="l" type="file" name="file" id="file" /><br /><br />
+
+                    <div class="form-inline form-group">
+                        <label class="l">Artist' Name : &nbsp;</label>
+                        <input type="text" class="form-control" name="ss" maxlength="30" placeholder="Leave it blank if u want.." />
+                    </div><br /><br />
+
                     <input type="submit" class="btn btn-warning" value="Upload" />
                     <br><br>
                     <div class="text-danger">@ViewBag.Message</div><br /><div class="text-success">Search uploaded song <a href="/Reg/reg">HERE</a></div>
