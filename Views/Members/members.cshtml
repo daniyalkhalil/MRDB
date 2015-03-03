@@ -94,9 +94,12 @@
                                 <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Play
                             </button>
 
+                            <audio controls="controls">
+                                <source src="~/App_Data/Songs/Amsterdam.mp3" type="audio/mpeg" />
+                            </audio>
 
                             <audio id="audio_@i" controls="controls">
-                                <source src="~/Songs/@s.name" type="audio/mp3" />
+                                <source src="~/App_Data/Songs/@s.name" type="audio/mp3" />
                             </audio>
                         </div>
                     </div>
